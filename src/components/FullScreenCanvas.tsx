@@ -1,12 +1,8 @@
 import {Canvas} from "react-three-fiber";
+import Object from "@/components/Object";
 
-interface Prop {
-    x: number;
-    y: number;
-    z: number;
-}
 
-export default function FullScreenCanvas(objects: Prop[]) {
+export default function FullScreenCanvas(...args: Object[]) {
     return (
         <Canvas
             style={{

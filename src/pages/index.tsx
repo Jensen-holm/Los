@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Cube from "@/components/Cube";
 import {Canvas} from "react-three-fiber";
+import Camera from "@/components/Camera";
 
 
 export default function Home() {
@@ -24,9 +25,13 @@ export default function Home() {
                     height: "100%",
                 }}
             >
+                <ambientLight/>
+                <Camera lookAt={[0, 0, 0]}
+                        position={[0, 0, 0]}/>
+
                 <Cube posX={1}
                       posY={1}
-                      posZ={1}></Cube>
+                      posZ={1}/>
             </Canvas>
         </>
     )
